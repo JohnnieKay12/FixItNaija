@@ -1,0 +1,191 @@
+ <!-- Featured Artisans -->
+
+    <section class="bg-gray-50 py-12 px-4 sm:px-6 lg:px-16">
+        <div class="max-w-7xl mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-[#d97706]">Featured Artisans</h2>
+                <p class="mt-2 text-[#d97706]">Browse talented artisans across different categories.</p>
+            </div>
+
+            <!-- Filters -->
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+                <!-- Search -->
+                <input type="text" placeholder="Search by name or role..." class="w-full md:w-1/2 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:border-blue-400" />
+
+                <!-- Category Filter -->
+                <select class="w-full md:w-1/4 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:border-blue-400">
+                    <option value="">All Categories</option>
+                    <option value="">Hair Stylist</option>
+                    <option value="">Makeup Artist</option>
+                    <option value="">Fashion Designer</option>
+                    <option value="">Nail Technician</option>
+                </select>
+            </div>
+
+            <!-- Card Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 text-center">
+                    <img src="../image/hair-stylist.jpg" alt="Artisan" class="w-24 h-24 object-cover rounded-full mx-auto mb-3" />
+                    <h3 class="text-lg font-semibold text-gray-800">Miracle James</h3>
+                    <p class="text-sm text-[#d97706]">Hair Stylist</p>
+                    <p class="text-sm text-gray-500">Ikeja, Lagos</p>
+                    <button onclick="openModal('Miracle James', 'Hair Stylist', 'Ikeja, Lagos', '+234 812 345 6789', 'Amazing stylist! Very professional.', 4, '../image/hair-stylist.jpg') "class="mt-4 bg-[#d97706] text-white px-2 py-1 rounded hover:bg-[#b85f03] transition">
+                        View Details
+                    </button>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 text-center">
+                    <img src="../image/makeup-artist.jpg" alt="Artisan" class="w-24 h-24 object-cover rounded-full mx-auto mb-3" />
+                    <h3 class="text-lg font-semibold text-gray-800">Sophia Bello</h3>
+                    <p class="text-sm text-[#d97706]">Makeup Artist</p>
+                    <p class="text-sm text-gray-500">Victoria Island, Lagos</p>
+                    <button onclick="openModal('Sophia Bello', 'Makeup Artist', 'Victoria Island, Lagos', '+234 812 345 6789', 'Amazing makeup artist! Very good.', 5, '../image/makeup-artist.jpg')" class="mt-4 bg-[#d97706] text-white px-2 py-1 rounded hover:bg-[#b85f03] transition">
+                        View Details
+                    </button>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 text-center">
+                    <img src="../image/fashion designer .jpg" alt="Artisan" class="w-24 h-24 object-cover rounded-full mx-auto mb-3" />
+                    <h3 class="text-lg font-semibold text-gray-800">Chioma Ade</h3>
+                    <p class="text-sm text-[#d97706]">Fashion Designer</p>
+                    <p class="text-sm text-gray-500">Garki, Abuja</p>
+                    <button onclick="openModal('Chioma Ade', 'Fashion Designer', 'Garki, Abuja', '+234 812 345 6789', 'Her designs are top-notch and affordable!', 5, '../image/fashion designer .jpg')" class="mt-4 bg-[#d97706] text-white px-2 py-1 rounded hover:bg-[#b85f03] transition">
+                        View Details
+                    </button>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 text-center">
+                    <img src="../image/Nail technician .jpg" alt="Artisan" class="w-24 h-24 object-cover rounded-full mx-auto mb-3" />
+                    <h3 class="text-lg font-semibold text-gray-800">Tina Onuoha</h3>
+                    <p class="text-sm text-[#d97706]">Nail Technician</p>
+                    <p class="text-sm text-gray-500">Lekki, Lagos</p>
+                    <button onclick="openModal('Tina Onuoha', 'Nail Technician', 'Lekki, Lagos', '+234 812 345 6789', 'Amazing nail technician! Very good.', 5, '../image/Nail technician .jpg')" class="mt-4 bg-[#d97706] text-white px-2 py-1 rounded hover:bg-[#b85f03] transition">
+                        View Details
+                    </button>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 text-center">
+                    <img src="../image/braider .jpg" alt="Artisan" class="w-24 h-24 object-cover rounded-full mx-auto mb-3" />
+                    <h3 class="text-lg font-semibold text-gray-800">Blessing Uche</h3>
+                    <p class="text-sm text-[#d97706]">Braider</p>
+                    <p class="text-sm text-gray-500">Yaba, Lagos</p>
+                    <button onclick="openModal('Blessing Uche', 'Braider', ' Yaba, Lagos', '+234 812 345 6789', 'Amazing braider! Very professional.', 4, '../image/braider .jpg')" class="mt-4 bg-[#d97706] text-white px-2 py-1 rounded hover:bg-[#b85f03] transition">
+                        View Details
+                    </button>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 text-center">
+                    <img src="../image/tailor .jpg" alt="Artisan" class="w-24 h-24 object-cover rounded-full mx-auto mb-3" />
+                    <h3 class="text-lg font-semibold text-gray-800">John Olumide</h3>
+                    <p class="text-sm text-[#d97706]">Tailor</p>
+                    <p class="text-sm text-gray-500">Maitama, Abuja</p>
+                    <button onclick="openModal('John Olumide', 'Tailor', 'Maitama, Abuja', '+234 812 345 6789', 'Special tailor! Very unique.', 4, '../image/tailor .jpg')" class="mt-4 bg-[#d97706] text-white px-2 py-1 rounded hover:bg-[#b85f03] transition">
+                        View Details
+                    </button>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 text-center">
+                    <img src="../image/barber.jpg" alt="Artisan" class="w-24 h-24 object-cover rounded-full mx-auto mb-3" />
+                    <h3 class="text-lg font-semibold text-gray-800">Emeka Nwankwo</h3>
+                    <p class="text-sm text-[#d97706]">Barber</p>
+                    <p class="text-sm text-gray-500">Enugu, Nigeria</p><button onclick="openModal('Emeka Nwankwo', 'Barber', 'Enugu, Nigeria', '+234 812 345 6789', 'Amazing barber! Very professional.', 5, '../image/barber.jpg')" class="mt-4 bg-[#d97706] text-white px-2 py-1 rounded hover:bg-[#b85f03] transition">
+                        View Details
+                    </button>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 text-center">
+                    <img src="../image/dreadlocks-stylist.jpg" alt="Artisan" class="w-24 h-24 object-cover rounded-full mx-auto mb-3" />
+                    <h3 class="text-lg font-semibold text-gray-800">Adaeze Okoro</h3>
+                    <p class="text-sm text-[#d97706]">Dreadlocks Stylist</p>
+                    <p class="text-sm text-gray-500">Port Harcourt</p>
+                    <button onclick="openModal('Adaeze Okoro', 'Dreadlocks Stylist', 'Port Harcourt', '+234 812 345 6789', 'Amazing dreadlocks stylist! Very good.', 5, '../image/dreadlocks-stylist.jpg')" class="mt-4 bg-[#d97706] text-white px-2 py-1 rounded hover:bg-[#b85f03] transition">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div id="artisanModal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-50 flex items-center justify-center">
+            <div class="bg-white rounded-lg shadow-lg max-w-md w-full p-6 relative">
+                <button onclick="closeModal()" class="absolute top-2 right-3 text-gray-500 hover:text-gray-700 text-xl">&times</button>
+                <div class="flex items-center gap-4 mb-4">
+                    <img id="modalImage" src="" alt="Artisan Image" class="w-24 h-24 rounded-full object-cover">
+                    <div>
+                        <h2 id="modalName" class="text-xl font-bold text-gray-800">Artisan Name</h2>
+                        <p id="modalRole" class="text-sm text-[#d97706] mb-1">Role</p>
+                    </div>
+                </div>
+                <p id="modalLocation" class="text-gray-600 mb-1">Location</p>
+                <p id="modalPhone" class="text-gray-600 mb-4">Phone</p>
+                <div class="mb-4">
+                    <p class="font-semibold text-gray-700">Review:</p>
+                    <p id="modalReview" class="text-gray-500 italic mb-1">Review text</p>
+                    <div id="modalRating" class="text-yellow-400">★★★★★</div>
+                </div>
+                <button class="bg-[#d97706] text-white px-4 py-2 rounded hover:bg-[#b85f03] transition w-full">
+                    Book Now
+                </button>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- How It Works -->
+    
+    <section class="bg-blue-600 text-white py-16 px-4 text-center">
+        <h2 class="text-3xl font-bold mb-6">How It Works</h2>
+        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-xl font-semibold mb-2">1. Search</h3>
+                <p>Find local service providers near you by searching your need.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold mb-2">2. Connect</h3>
+                <p>Call or WhatsApp the artisan directly to schedule your services or You can also Book the artisan.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold mb-2">3. Get it Done</h3>
+                <p>Enjoy quality, verified services from FixItNaija-approved providers.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+
+    <footer class="bg-gray-800 text-white py-10 px-6">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div>
+                <h3 class="text-lg font-semibold mb-2">FixItNaija</h3>
+                <p>Connecting you to trusted service providers all over Nigeria.</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-2">Contact</h3>
+                <p>Email: jcodesstudio@gmail.com</p>
+                <p>Phone: +234-815-282-6507</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-2">Follow Us</h3>
+                <div class="flex gap-4">
+                    <a href="#"><i class="fab fa-facebook text-white"></i></a>
+                    <a href="#"><i class="fab fa-instagram text-white"></i></a>
+                    <a href="#"><i class="fab fa-twitter text-white"></i></a>
+                    <a href="#"><i class="fab fa-linkedin text-white"></i></a>
+                </div>
+            </div>
+        </div>
+        <p class="text-center text-sm mt-6">@ 2025 FixItNaija. All rights reserved</p>
+    </footer>
+
