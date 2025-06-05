@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FixItNaija</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../style/style.css">
+
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation -->
+
+    <nav class="absolute top-0 left-0 w-full flex justify-between items-center p-6 text-white z-10">
+        <a href="index.html"><h1 class="text-2xl font-bold text-white">FixItNaija</h1></a>
+
+        <!-- Hamburger / Close Icons -->
+        <button id="menu-toggle" class="md:hidden focus:outline-none z-30">
+            <!-- Hamburger Icon -->
+            <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12H12m-8.25 5.25h16.5" />
+            </svg>
+            <!-- Close Icon -->
+            <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white hidden" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+        </button>
+
+        <!-- Desktop Nav Links -->
+        <ul class="hidden md:flex gap-6 font-semibold">
+            <li><a href="index.html" class="desktop-link underline-animated">Home</a></li>
+            <li><a href="about.html" class="desktop-link underline-animated">About</a></li>
+            <li><a href="service.html" class="desktop-link underline-animated">Services</a></li>
+            <li><a href="list.html" class="desktop-link underline-animated">List</a></li>
+            <li><a href="contact.html" class="desktop-link underline-animated">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed bottom-0 left-0 w-full h-[85vh] bg-black bg-opacity-92 text-white hidden flex flex-col items-center gap-8 py-12 px-6 z-50 transform translate-y-full transition-transform duration-500 ease-in-out md:hidden rounded-t-3xl">
+        <a href="index.html" class="mobile-link underline-animated text-2xl font-medium">Home</a>
+        <a href="about.html" class="mobile-link underline-animated text-2xl font-medium">About</a>
+        <a href="service.html" class="mobile-link underline-animated text-2xl font-medium">Services</a>
+        <a href="list.html" class="mobile-link underline-animated text-2xl font-medium">List</a></li>
+        <a href="contact.html" class="mobile-link underline-animated text-2xl font-medium">Contact</a></li>
+    </div>
+
+
+    <!-- Hero Section [#d97706] hover:bg-[#b85f03] -->
+
+    <section class="relative bg-cover bg-center bg-no-repeat py-28 mb-10" style="background-image: url('https://images.unsplash.com/photo-1599785209707-28b6896c5a3c');">
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div class="relative max-w-6xl mx-auto px-6 text-center text-white z-10">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Get in Touch with Our Expert Artisans</h1>
+            <p class="text-lg md:text-xl mb-6">We’re ready to transform your vision into reality. Let’s connect today!</p>
+            <a href="#contactForm" class="inline-block bg-[#d97706] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#b85f03] transition">
+                Contact Us Now
+            </a>
+        </div>
+    </section>
+
+    <div class="max-w-6xl mx-auto p-6">
+        <h2 class="text-4xl font-bold text-center mb-10 text-[#d97706]">Contact Us</h2>
+        <div class="grid md:grid-cols-2 gap-10">
+            <!-- Contact Information -->
+            <div class="space-y-6">
+                <h3 class="text-2xl font-semibold">Get in Touch</h3>
+                <p class="text-gray-600">Have questions or want to book a service? Reach out to us anytime, and we’ll get back to you as soon as possible.</p>
+                <div class="text-gray-700 space-y-2">
+                    <p><i class="fas fa-map-marker-alt mr-2 text-[#d97706]"></i>39 Enoma Street Ago, Lagos, Nigeria</p>
+                    <p><i class="fas fa-phone mr-2 text-[#d97706]"></i>+234 812 345 6789</p>
+                    <p><i class="fas fa-envelope mr-2 text-[#d97706]"></i>jcodesstudio@gmail.com</p>
+                </div>
+                <!-- Social Icons -->
+                <div class="flex space-x-4 mt-4">
+                    <a href="#" class="text-[#d97706] hover:text-[#b85f03]"><i class="fab fa-facebook fa-lg"></i></a>
+                    <a href="#" class="text-[#d97706] hover:text-[#b85f03]"><i class="fab fa-twitter fa-lg"></i></a>
+                    <a href="#" class="text-[#d97706] hover:text-[#b85f03]"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="#" class="text-[#d97706] hover:text-[#b85f03]"><i class="fab fa-linkedin fa-lg"></i></a>
+                </div>
+                <!-- WhatsApp Button --> 
+                <a href="https://wa.me/2348152826507" target="_blank" class="inline-block mt-8 bg-[#d97706] text-white px-4 py-2 rounded hover:bg-[#b85f03]">
+                    <i class="fab fa-whatsapp mr-2"></i>Chat on WhatsApp
+                </a>
+            </div>
+
+            <!-- Contact Form -->
+            <form id="contactForm" class="bg-white shadow-lg rounded-xl p-8 space-y-5"> 
+                <div>
+                    <label class="block text-sm font-medium">Full Name</label>
+                    <input name="name" id="name" type="text" required class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-200">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium">Email Address</label>
+                    <input name="email" id="email" type="email" required class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-200">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium">Your Message</label>
+                    <textarea name="message" id="message" rows="4" required class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-200"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-[#d97706] text-white py-2 rounded-md hover:bg-[#b85f03]">Send Message</button>
+            </form>
+        </div>
+    
+        <!-- Success Modal -->
+        <div id="successModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+            <div class="bg-white p-6 rounded shadow-xl max-w-sm text-center">
+                <h4 class="text-xl font-bold mb-2 text-green-600">Success!</h4>
+                <p class="mb-4">Your message has been sent.</p>
+                <button onclick="terminateModal()" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Close</button>
+            </div>
+        </div>
+    
+        <!-- Map Section -->
+        <div class="mt-16">
+            <h3 class="text-2xl font-semibold mb-4">Find Us on the Map</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.781100214292!2d3.3792!3d6.5244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8c6f10000001%3A0x1cf219b0a3bbf6df!2sLagos%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1616189153021!5m2!1sen!2sng"
+                width="100%"
+                height="400"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                class="rounded-lg shadow-md">
+            </iframe>
+        </div>
+    </div>
+
+    
+
+
+    <!-- Footer -->
+
+    <footer class="bg-gray-50 border-t border-gray-200 py-12 mt-10">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-10 text-gray-700">
+            <!-- Logo & Description -->
+            <div>
+                <h2 class="text-2xl font-bold text-[#d97706] mb-4">FixItNaija</h2>
+                <p class="text-sm leading-relaxed">
+                Connecting you with trusted artisans and service providers near you, fast, reliable, and easy.
+                </p>
+            </div>
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                <ul class="space-y-2 text-sm">
+                <li><a href="index.html" class="hover:text-[#d97706]">Home</a></li>
+                <li><a href="#how_it_works" class="hover:text-[#d97706]">How It Works</a></li>
+                <li><a href="service.html" class="hover:text-[#d97706]">Services</a></li>
+                <li><a href="contact.html" class="hover:text-[#d97706]">Contact</a></li>
+                </ul>
+            </div>
+            <!-- Services -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Top Services</h3>
+                <ul class="space-y-2 text-sm">
+                <li><a href="#" class="hover:text-[#d97706]">Hair Stylists</a></li>
+                <li><a href="#" class="hover:text-[#d97706]">Plumbers</a></li>
+                <li><a href="#" class="hover:text-[#d97706]">Electricians</a></li>
+                <li><a href="#" class="hover:text-[#d97706]">More Services</a></li>
+                </ul>
+            </div>
+            <!-- Contact & Social -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                <p class="text-sm mb-2">jcodesstudio@gmail.com</p>
+                <p class="text-sm mb-4">+234 815 282 6507</p>
+                <div class="flex space-x-4 mt-4">
+                    <a href="/facebook" class="text-gray-500 hover:text-[#d97706]" aria-label="Facebook">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M22 12.07C22 6.48 17.52 2 12 2S2 6.48 2 12.07c0 5 3.66 9.13 8.44 9.88v-6.99h-2.54V12h2.54v-2.12c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.96h-2.34v6.99C18.34 21.2 22 17.07 22 12.07z"/>
+                        </svg>
+                    </a>
+                    <a href="/x" class="text-gray-500 hover:text-[#d97706]" aria-label="Twitter/X">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M22 4.01a8.9 8.9 0 0 1-2.6.71A4.52 4.52 0 0 0 21.4 2a9.02 9.02 0 0 1-2.86 1.1A4.48 4.48 0 0 0 15.5 2c-2.5 0-4.5 2.03-4.5 4.54 0 .36.04.7.12 1.04C7.73 7.36 4.1 5.45 1.7 2.44A4.54 4.54 0 0 0 .9 4.95c0 1.57.78 2.96 1.96 3.78a4.48 4.48 0 0 1-2.05-.58v.06c0 2.2 1.54 4.03 3.6 4.44a4.44 4.44 0 0 1-2.04.08c.58 1.82 2.26 3.14 4.25 3.18A9.01 9.01 0 0 1 0 19.1a12.75 12.75 0 0 0 6.88 2.02c8.26 0 12.78-6.91 12.78-12.9 0-.2 0-.41-.02-.61A9.33 9.33 0 0 0 24 4.56a8.97 8.97 0 0 1-2.6.72A4.51 4.51 0 0 0 22 4.01z"/>
+                        </svg>
+                    </a>
+                    <a href="/instagram" class="text-gray-500 hover:text-[#d97706]" aria-label="Instagram">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M7 2C4.8 2 3 3.8 3 6v12c0 2.2 1.8 4 4 4h10c2.2 0 4-1.8 4-4V6c0-2.2-1.8-4-4-4H7zm0 2h10c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H7c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm5 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm4.5-1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
+                        </svg>
+                    </a>
+                    <a href="/linkedin" class="text-gray-500 hover:text-[#d97706]" aria-label="LinkedIn">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M6.94 6.06a1.81 1.81 0 1 1 0-3.62 1.81 1.81 0 0 1 0 3.62zM4.5 21V8.25h4.88V21H4.5zM14.16 8.25c-2.06 0-2.95 1.16-3.2 1.98V8.25H6.06V21h4.88v-6.56c0-1.77.87-2.44 2.03-2.44 1.1 0 1.63.65 1.63 2.13V21h4.88v-6.82c0-3.45-1.84-5.13-4.32-5.13z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-sm text-gray-500 mt-10 px-4">
+            © 2025 FixItNaija. All rights reserved.
+        </div>
+    </footer>
+
+
+
+
+    <script>
+
+
+        const form = document.getElementById('contactForm');
+        const modal = document.getElementById('successModal');
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            if (!name || !email || !message) {
+                alert('Please fill in all fields.');
+                return;
+            }
+            try {
+                const response = await fetch('https://formspree.io/f/xyzjzken', { 
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({ name, email, message })
+                });
+                if (response.ok) {
+                    modal.classList.remove('hidden');
+                    form.reset();
+                } else {
+                    alert('There was an error sending your message.');
+                }
+            } catch (error) {
+                alert('Something went wrong. Please try again later.');
+            }
+        });
+            function terminateModal() {
+                modal.classList.add('hidden');
+            }
+
+
+    </script>
+
+
+    <!-- Js Script -->
+    <script src="../js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FixItNaija</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../style/style.css">
+
+</head>
+<body class="bg-gray-50 text-gray-800 flex justify-center items-center min-h-screen">
+
+
+    <div class="bg-white p-8 rounded shadow-md w-full max-w-md">
+        <h2 class="text-2xl font-bold mb-4 text-center">Register</h2>
+        <input id="name" type="text" placeholder="Full Name" class="w-full mb-4 px-4 py-2 border rounded">
+        <input id="email" type="email" placeholder="Email" class="w-full mb-4 px-4 py-2 border rounded">
+        <input id="password" type="password" placeholder="Password" class="w-full mb-4 px-4 py-2 border rounded">
+        <label class="inline-flex items-center mb-4">
+            <input type="checkbox" id="isAdmin" class="form-checkbox">
+            <span class="ml-2">Register as Admin</span>
+        </label>
+        <button onclick="register()" class="w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded">Register</button>
+        <p class="text-center text-sm mt-4">Already have an account? <a href="login.html" class="text-blue-600">Login</a></p>
+    </div>
+
+
+</body>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FixItNaija</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../style/style.css">
+
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen">
+
+
+    <div class="max-w-4xl mx-auto py-10">
+        <h1 class="text-3xl font-bold mb-6 text-center">Admin Dashboard</h1>
+        <div class="bg-white p-6 rounded shadow">
+            <h2 class="text-xl font-semibold mb-4">Add Artisan</h2>
+            <input id="name" type="text" placeholder="Name" class="w-full mb-4 px-4 py-2 border rounded">
+            <input id="service" type="text" placeholder="Service" class="w-full mb-4 px-4 py-2 border rounded">
+            <input id="city" type="text" placeholder="City" class="w-full mb-4 px-4 py-2 border rounded">
+            <input id="phone" type="text" placeholder="Phone Number" class="w-full mb-4 px-4 py-2 border rounded">
+            <input id="image" type="file" accept="image/*" class="w-full mb-4 border rounded px-4 py-2">
+            <button onclick="addArtisan()" class="w-full bg-yellow-600 hover:bg-yellow-700 text-white py-2 rounded">Add Artisan</button>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="../js/script.js"></script>
+
+
+</body>

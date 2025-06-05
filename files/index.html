@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FixItNaija</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../style/style.css">
+
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation -->
+
+    <nav class="absolute top-0 left-0 w-full flex justify-between items-center p-6 text-white z-10">
+        <a href="index.html"><h1 class="text-2xl font-bold text-white">FixItNaija</h1></a>
+
+        <!-- Hamburger / Close Icons -->
+        <button id="menu-toggle" class="md:hidden focus:outline-none z-30">
+            <!-- Hamburger Icon -->
+            <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12H12m-8.25 5.25h16.5" />
+            </svg>
+            <!-- Close Icon -->
+            <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white hidden" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+        </button>
+
+        <!-- Desktop Nav Links -->
+        <ul class="hidden md:flex gap-6 font-semibold">
+            <li><a href="index.html" class="desktop-link underline-animated">Home</a></li>
+            <li><a href="about.html" class="desktop-link underline-animated">About</a></li>
+            <li><a href="service.html" class="desktop-link underline-animated">Services</a></li>
+            <li><a href="list.html" class="desktop-link underline-animated">List</a></li>
+            <li><a href="contact.html" class="desktop-link underline-animated">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed bottom-0 left-0 w-full h-[85vh] bg-black bg-opacity-92 text-white hidden flex flex-col items-center gap-8 py-12 px-6 z-50 transform translate-y-full transition-transform duration-500 ease-in-out md:hidden rounded-t-3xl">
+        <a href="index.html" class="mobile-link underline-animated text-2xl font-medium">Home</a>
+        <a href="about.html" class="mobile-link underline-animated text-2xl font-medium">About</a>
+        <a href="service.html" class="mobile-link underline-animated text-2xl font-medium">Services</a>
+        <a href="list.html" class="mobile-link underline-animated text-2xl font-medium">List</a></li>
+        <a href="contact.html" class="mobile-link underline-animated text-2xl font-medium">Contact</a></li>
+    </div>
+
+    
+    <!-- Hero Section -->
+
+    <section class="relative bg-cover bg-center bg-no-repeat text-white py-32 px-4 text-center" style="background-image: url(../image/background.jpg);">
+        <div class="absolute inset-0 bg-black/50"></div>
+        <div class="relative z-10 max-w-2xl mx-auto mt-8">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Find Trusted Local Service Providers</h1>
+            <p class="mb-6 text-lg">Search and connect with verified artisans in your area</p>
+            <!-- <div class="flex flex-col md:flex-row justify-center gap-4 mt-6">
+                <input id="serviceInput" type="text" placeholder="What service do you need?" class="w-full md:w-72 px-5 py-3 rounded-xl text-gray-800 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm transition" />
+                <input id="locationInput" type="text" placeholder="Your city or area" class="w-full md:w-72 px-5 py-3 rounded-xl text-gray-800 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm transition">
+                <button id="searchBtn" class="bg-[#d97706] hover:bg-[#b85f03] text-white px-6 py-3 rounded-md font-semibold shadow-md transition duration-300 ease-in-out">Search</button>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Search Results Container -->
+    <!-- <div id="searchResults" class="max-w-4xl mx-auto mt-8 px-4"></div> -->
+
+
+    <!-- Modal -->
+
+    <!-- Modal -->
+    <!-- <div id="profileModal" class="fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center z-50">
+        <div class="bg-white max-w-md w-full p-6 rounded-xl relative mx-4">
+            <button onclick="closeModal()" class="absolute top-3 right-4 text-gray-700 text-2xl font-bold">&times;</button>
+            <img id="profileModalImg" class="w-full h-48 object-cover rounded-md mb-4" src="" alt="Profile Image" />
+            <h2 id="profileModalName" class="text-2xl font-bold mb-2"></h2>
+            <p id="profileModalService" class="text-gray-700 mb-1"></p>
+            <p id="profileModalLocation" class="text-gray-500 mb-3"></p>
+            <p id="profileModalDesc" class="text-gray-600 mb-4"></p>
+            <p id="profileModalRating" class="text-yellow-500 font-semibold mb-4"></p>
+            <a id="profileModalWhatsapp" href="#" target="_blank" class="block bg-[#d97706] hover:bg-[#b85f03] text-white py-2 rounded-md text-center font-semibold">Book Now on WhatsApp</a>
+        </div>
+    </div> -->
+
+
+
+    <!-- Categories -->
+
+    <section class="py-16 px-4 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-12 text-center text-[#d97706]">Popular Categories</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <!-- Category Card -->
+            <div class="group relative bg-white p-6 rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1 text-center hover:bg-gradient-to-br from blue-100 to-blue-200">
+                <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-600/10 flex items-center justify-center group-hover:scale-110 transition duration-300">
+                    <img loading="lazy" src="../image/electrician.png"  class="mx-auto mb-2 w-28 h-22">
+                </div>
+                <p class="text-lg font-semibold text-gray-800">Electricians</p>
+            </div>
+
+            <div class="group relative bg-white p-6 rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1 text-center hover:bg-gradient-to-br from blue-100 to-blue-200">
+                <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-600/10 flex items-center justify-center group-hover:scale-110 transition duration-300">
+                    <img loading="lazy" src="../image/tailor.png"  class="mx-auto mb-2 w-28 h-22">
+                </div>
+                <p class="text-lg font-semibold text-gray-800">Tailors</p>
+            </div>
+
+            <div class="group relative bg-white p-6 rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1 text-center hover:bg-gradient-to-br from blue-100 to-blue-200">
+                <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-600/10 flex items-center justify-center group-hover:scale-110 transition duration-300">
+                    <img loading="lazy" src="../image/plumber.png"  class="mx-auto mb-2 w-28 h-22">
+                </div>
+                <p class="text-lg font-semibold text-gray-800">Plumbers</p>
+            </div>
+
+            <div class="group relative bg-white p-6 rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1 text-center hover:bg-gradient-to-br from blue-100 to-blue-200">
+                <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-600/10 flex items-center justify-center group-hover:scale-110 transition duration-300">
+                    <img loading="lazy" src="../image/mechanic.png"  class="mx-auto mb-2 w-28 h-22">
+                </div>
+                <p class="text-lg font-semibold text-gray-800">Mechanics</p>
+            </div>
+
+            <div class="group relative bg-white p-6 rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1 text-center hover:bg-gradient-to-br from blue-100 to-blue-200">
+                <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-600/10 flex items-center justify-center group-hover:scale-110 transition duration-300">
+                    <img loading="lazy" src="../image/cleaner.png"  class="mx-auto mb-2 w-28 h-22">
+                </div>
+                <p class="text-lg font-semibold text-gray-800">Cleaners</p>
+            </div>
+
+            <div class="group relative bg-white p-6 rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1 text-center hover:bg-gradient-to-br from blue-100 to-blue-200">
+                <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-600/10 flex items-center justify-center group-hover:scale-110 transition duration-300">
+                    <img loading="lazy" src="../image/painter.png"  class="mx-auto mb-2 w-28 h-22">
+                </div>
+                <p class="text-lg font-semibold text-gray-800">Painters</p>
+            </div>
+
+            <div class="group relative bg-white p-6 rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1 text-center hover:bg-gradient-to-br from blue-100 to-blue-200">
+                <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-600/10 flex items-center justify-center group-hover:scale-110 transition duration-300">
+                    <img loading="lazy" src="../image/carpentry.png"  class="mx-auto mb-2 w-28 h-22">
+                </div>
+                <p class="text-lg font-semibold text-gray-800">Carpenters</p>
+            </div>
+
+            <div class="group relative bg-white p-6 rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1 text-center hover:bg-gradient-to-br from blue-100 to-blue-200">
+                <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-600/10 flex items-center justify-center group-hover:scale-110 transition duration-300">
+                    <img loading="lazy" src="../image/ac_tech.png"  class="mx-auto mb-2 w-28 h-22">
+                </div>
+                <p class="text-lg font-semibold text-gray-800">AC Technicians</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Artisans -->
+
+    <section class="bg-gray-50 py-12 px-4 sm:px-6 lg:px-16">
+        <div class="max-w-7xl mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-[#d97706]">Featured Artisans</h2>
+                <p class="mt-2 text-[#d97706]">Browse talented artisans across different categories.</p>
+            </div>
+
+            <!-- Card Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 text-center">
+                    <img loading="lazy" src="../image/hair-stylist.jpg" alt="Artisan" class="w-24 h-24 object-cover rounded-full mx-auto mb-3" />
+                    <h3 class="text-lg font-semibold text-gray-800">Miracle James</h3>
+                    <p class="text-sm text-[#d97706]">Hair Stylist</p>
+                    <p class="text-sm text-gray-500">Ikeja, Lagos</p>
+                    <button onclick="openModal('Miracle James', 'Hair Stylist', 'Ikeja, Lagos', '+234 812 345 6789', 'Amazing stylist! Very professional.', 4, '../image/hair-stylist.jpg') "class="mt-4 bg-[#d97706] text-white px-2 py-1 rounded hover:bg-[#b85f03] transition">
+                        View Details
+                    </button>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 text-center">
+                    <img loading="lazy" src="../image/makeup-artist.jpg" alt="Artisan" class="w-24 h-24 object-cover rounded-full mx-auto mb-3" />
+                    <h3 class="text-lg font-semibold text-gray-800">Sophia Bello</h3>
+                    <p class="text-sm text-[#d97706]">Makeup Artist</p>
+                    <p class="text-sm text-gray-500">Victoria Island, Lagos</p>
+                    <button onclick="openModal('Sophia Bello', 'Makeup Artist', 'Victoria Island, Lagos', '+234 812 345 6789', 'Amazing makeup artist! Very good.', 5, '../image/makeup-artist.jpg')" class="mt-4 bg-[#d97706] text-white px-2 py-1 rounded hover:bg-[#b85f03] transition">
+                        View Details
+                    </button>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 text-center">
+                    <img loading="lazy" src="../image/fashion designer .jpg" alt="Artisan" class="w-24 h-24 object-cover rounded-full mx-auto mb-3" />
+                    <h3 class="text-lg font-semibold text-gray-800">Chioma Ade</h3>
+                    <p class="text-sm text-[#d97706]">Fashion Designer</p>
+                    <p class="text-sm text-gray-500">Garki, Abuja</p>
+                    <button onclick="openModal('Chioma Ade', 'Fashion Designer', 'Garki, Abuja', '+234 812 345 6789', 'Her designs are top-notch and affordable!', 5, '../image/fashion designer .jpg')" class="mt-4 bg-[#d97706] text-white px-2 py-1 rounded hover:bg-[#b85f03] transition">
+                        View Details
+                    </button>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 text-center">
+                    <img loading="lazy" src="../image/Nail technician .jpg" alt="Artisan" class="w-24 h-24 object-cover rounded-full mx-auto mb-3" />
+                    <h3 class="text-lg font-semibold text-gray-800">Tina Onuoha</h3>
+                    <p class="text-sm text-[#d97706]">Nail Technician</p>
+                    <p class="text-sm text-gray-500">Lekki, Lagos</p>
+                    <button onclick="openModal('Tina Onuoha', 'Nail Technician', 'Lekki, Lagos', '+234 812 345 6789', 'Amazing nail technician! Very good.', 5, '../image/Nail technician .jpg')" class="mt-4 bg-[#d97706] text-white px-2 py-1 rounded hover:bg-[#b85f03] transition">
+                        View Details
+                    </button>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 text-center">
+                    <img loading="lazy" src="../image/braider .jpg" alt="Artisan" class="w-24 h-24 object-cover rounded-full mx-auto mb-3" />
+                    <h3 class="text-lg font-semibold text-gray-800">Blessing Uche</h3>
+                    <p class="text-sm text-[#d97706]">Braider</p>
+                    <p class="text-sm text-gray-500">Yaba, Lagos</p>
+                    <button onclick="openModal('Blessing Uche', 'Braider', ' Yaba, Lagos', '+234 812 345 6789', 'Amazing braider! Very professional.', 4, '../image/braider .jpg')" class="mt-4 bg-[#d97706] text-white px-2 py-1 rounded hover:bg-[#b85f03] transition">
+                        View Details
+                    </button>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 text-center">
+                    <img loading="lazy" src="../image/tailor .jpg" alt="Artisan" class="w-24 h-24 object-cover rounded-full mx-auto mb-3" />
+                    <h3 class="text-lg font-semibold text-gray-800">John Olumide</h3>
+                    <p class="text-sm text-[#d97706]">Tailor</p>
+                    <p class="text-sm text-gray-500">Maitama, Abuja</p>
+                    <button onclick="openModal('John Olumide', 'Tailor', 'Maitama, Abuja', '+234 812 345 6789', 'Special tailor! Very unique.', 4, '../image/tailor .jpg')" class="mt-4 bg-[#d97706] text-white px-2 py-1 rounded hover:bg-[#b85f03] transition">
+                        View Details
+                    </button>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 text-center">
+                    <img loading="lazy" src="../image/barber.jpg" alt="Artisan" class="w-24 h-24 object-cover rounded-full mx-auto mb-3" />
+                    <h3 class="text-lg font-semibold text-gray-800">Emeka Nwankwo</h3>
+                    <p class="text-sm text-[#d97706]">Barber</p>
+                    <p class="text-sm text-gray-500">Enugu, Nigeria</p>
+                    <button onclick="openModal('Emeka Nwankwo', 'Barber', 'Enugu, Nigeria', '+234 812 345 6789', 'Amazing barber! Very professional.', 5, '../image/barber.jpg')" class="mt-4 bg-[#d97706] text-white px-2 py-1 rounded hover:bg-[#b85f03] transition">
+                        View Details
+                    </button>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 text-center">
+                    <img loading="lazy" src="../image/dreadlocks-stylist.jpg" alt="Artisan" class="w-24 h-24 object-cover rounded-full mx-auto mb-3" />
+                    <h3 class="text-lg font-semibold text-gray-800">Adaeze Okoro</h3>
+                    <p class="text-sm text-[#d97706]">Dreadlocks Stylist</p>
+                    <p class="text-sm text-gray-500">Port Harcourt</p>
+                    <button onclick="openModal('Adaeze Okoro', 'Dreadlocks Stylist', 'Port Harcourt', '+234 812 345 6789', 'Amazing dreadlocks stylist! Very good.', 5, '../image/dreadlocks-stylist.jpg')" class="mt-4 bg-[#d97706] text-white px-2 py-1 rounded hover:bg-[#b85f03] transition">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div id="artisanModal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-50 flex items-center justify-center">
+            <div class="bg-white rounded-lg shadow-lg max-w-md w-full p-6 relative">
+                <button onclick="closeArtisanModal()" class="absolute top-2 right-3 text-gray-500 hover:text-gray-700 text-xl">&times</button>
+                <div class="flex items-center gap-4 mb-4">
+                    <img loading="lazy" id="artisanModalImage" src="" alt="Artisan Image" class="w-24 h-24 rounded-full object-cover">
+                    <div>
+                        <h2 id="artisanModalName" class="text-xl font-bold text-gray-800">Artisan Name</h2>
+                        <p id="artisanModalRole" class="text-sm text-[#d97706] mb-1">Role</p>
+                    </div>
+                </div>
+                <p id="artisanModalLocation" class="text-gray-600 mb-1">Location</p>
+                <p id="artisanModalPhone" class="text-gray-600 mb-4">Phone</p>
+                <div class="mb-4">
+                    <p class="font-semibold text-gray-700">Review:</p>
+                    <p id="artisanModalReview" class="text-gray-500 italic mb-1">Review text</p>
+                    <div id="artisanModalRating" class="text-yellow-400">★★★★★</div>
+                </div>
+                <button onclick="openWhatsApp()" class="bg-[#d97706] text-white px-4 py-2 rounded hover:bg-[#b85f03] transition w-full">
+                    Book Now
+                </button>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- How It Works -->
+
+    <section class="relative py-12 px-6 text-white text-center" id="how_it_works" style="background-image: url('../image/how-it-works-back-2.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="absolute inset-0 bg-black bg-opacity-70"></div>
+        <div class="relative z-10 max-w-6xl mx-auto">
+            <h2 class="text-4xl font-semibold mb-6">How It Works</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-y-10 md:gap-y-0 gap-x-12 text-left ml-9">
+                <div>
+                    <h3 class="text-xl font-semibold mb-2">1. Search</h3>
+                    <p class="text-gray-200">Find trusted artisans near you based on location, service and by browsing categories or using the search bar.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-2">2. Connect</h3>
+                    <p class="text-gray-200">Call or message the artisan directly, or book directly from their profile. Get quick response with no middleman.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-2">3. Get It Done</h3>
+                    <p class="text-gray-200">Relax while a verified  and trusted professional handles your task smoothly and reliably.</p>
+                </div>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="mt-10">
+                <a href="#search-section" class="inline-block bg-[#d97706]  hover:bg-[#b85f03] text-white px-6 py-3 rounded-full transition shadow-lg">
+                    Find an Artisan
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+
+    <footer class="bg-gray-50 border-t border-gray-200 py-12 mt-10">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-10 text-gray-700">
+            <!-- Logo & Description -->
+            <div>
+                <h2 class="text-2xl font-bold text-[#d97706] mb-4">FixItNaija</h2>
+                <p class="text-sm leading-relaxed">
+                Connecting you with trusted artisans and service providers near you, fast, reliable, and easy.
+                </p>
+            </div>
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                <ul class="space-y-2 text-sm">
+                <li><a href="index.html" class="hover:text-[#d97706]">Home</a></li>
+                <li><a href="#how_it_works" class="hover:text-[#d97706]">How It Works</a></li>
+                <li><a href="service.html" class="hover:text-[#d97706]">Services</a></li>
+                <li><a href="contact.html" class="hover:text-[#d97706]">Contact</a></li>
+                </ul>
+            </div>
+            <!-- Services -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Top Services</h3>
+                <ul class="space-y-2 text-sm">
+                <li><a href="#" class="hover:text-[#d97706]">Hair Stylists</a></li>
+                <li><a href="#" class="hover:text-[#d97706]">Plumbers</a></li>
+                <li><a href="#" class="hover:text-[#d97706]">Electricians</a></li>
+                <li><a href="#" class="hover:text-[#d97706]">More Services</a></li>
+                </ul>
+            </div>
+            <!-- Contact & Social -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                <p class="text-sm mb-2">jcodesstudio@gmail.com</p>
+                <p class="text-sm mb-4">+234 815 282 6507</p>
+                <div class="flex space-x-4 mt-4">
+                    <a href="/facebook" class="text-gray-500 hover:text-[#d97706]" aria-label="Facebook">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M22 12.07C22 6.48 17.52 2 12 2S2 6.48 2 12.07c0 5 3.66 9.13 8.44 9.88v-6.99h-2.54V12h2.54v-2.12c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.96h-2.34v6.99C18.34 21.2 22 17.07 22 12.07z"/>
+                        </svg>
+                    </a>
+                    <a href="/x" class="text-gray-500 hover:text-[#d97706]" aria-label="Twitter/X">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M22 4.01a8.9 8.9 0 0 1-2.6.71A4.52 4.52 0 0 0 21.4 2a9.02 9.02 0 0 1-2.86 1.1A4.48 4.48 0 0 0 15.5 2c-2.5 0-4.5 2.03-4.5 4.54 0 .36.04.7.12 1.04C7.73 7.36 4.1 5.45 1.7 2.44A4.54 4.54 0 0 0 .9 4.95c0 1.57.78 2.96 1.96 3.78a4.48 4.48 0 0 1-2.05-.58v.06c0 2.2 1.54 4.03 3.6 4.44a4.44 4.44 0 0 1-2.04.08c.58 1.82 2.26 3.14 4.25 3.18A9.01 9.01 0 0 1 0 19.1a12.75 12.75 0 0 0 6.88 2.02c8.26 0 12.78-6.91 12.78-12.9 0-.2 0-.41-.02-.61A9.33 9.33 0 0 0 24 4.56a8.97 8.97 0 0 1-2.6.72A4.51 4.51 0 0 0 22 4.01z"/>
+                        </svg>
+                    </a>
+                    <a href="/instagram" class="text-gray-500 hover:text-[#d97706]" aria-label="Instagram">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M7 2C4.8 2 3 3.8 3 6v12c0 2.2 1.8 4 4 4h10c2.2 0 4-1.8 4-4V6c0-2.2-1.8-4-4-4H7zm0 2h10c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H7c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm5 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm4.5-1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
+                        </svg>
+                    </a>
+                    <a href="/linkedin" class="text-gray-500 hover:text-[#d97706]" aria-label="LinkedIn">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M6.94 6.06a1.81 1.81 0 1 1 0-3.62 1.81 1.81 0 0 1 0 3.62zM4.5 21V8.25h4.88V21H4.5zM14.16 8.25c-2.06 0-2.95 1.16-3.2 1.98V8.25H6.06V21h4.88v-6.56c0-1.77.87-2.44 2.03-2.44 1.1 0 1.63.65 1.63 2.13V21h4.88v-6.82c0-3.45-1.84-5.13-4.32-5.13z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-sm text-gray-500 mt-10 px-4">
+            © 2025 FixItNaija. All rights reserved.
+        </div>
+    </footer>
+
+
+
+    <!-- Js Script -->
+    <script src="../js/script.js"></script>
+    <!-- <script src="../js/home.js"></script> -->
+
+</body>
+</html>

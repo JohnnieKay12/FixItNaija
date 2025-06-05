@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FixItNaija</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tom-select@2.2.2/dist/css/to-select.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/tom-select@2.2.2/dist/js/tom-select.complete.min.js"></script>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation -->
+
+    <nav class="absolute top-0 left-0 w-full flex justify-between items-center p-6 text-white z-10 ">
+        <a href="index.html"><h1 class="text-2xl font-bold">FixItNaija</h1></a>
+
+        <!-- Hamburger / Close Icons -->
+        <button id="menu-toggle" class="md:hidden focus:outline-none z-30">
+            <!-- Hamburger Icon -->
+            <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12H12m-8.25 5.25h16.5" />
+            </svg>
+            <!-- Close Icon -->
+            <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white hidden" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+        </button>
+
+        <!-- Desktop Nav Links -->
+        <ul class="hidden md:flex gap-6 font-semibold">
+            <li><a href="index.html" class="desktop-link underline-animated">Home</a></li>
+            <li><a href="about.html" class="desktop-link underline-animated">About</a></li>
+            <li><a href="service.html" class="desktop-link underline-animated">Services</a></li>
+            <li><a href="list.html" class="desktop-link underline-animated">List</a></li>
+            <li><a href="contact.html" class="desktop-link underline-animated">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed bottom-0 left-0 w-full h-[85vh] bg-black bg-opacity-92 text-white hidden flex flex-col items-center gap-8 py-12 px-6 z-50 transform translate-y-full transition-transform duration-500 ease-in-out md:hidden rounded-t-3xl">
+        <a href="index.html" class="mobile-link underline-animated text-2xl font-medium">Home</a>
+        <a href="about.html" class="mobile-link underline-animated text-2xl font-medium">About</a>
+        <a href="service.html" class="mobile-link underline-animated text-2xl font-medium">Services</a>
+        <a href="list.html" class="mobile-link underline-animated text-2xl font-medium">List</a></li>
+        <a href="contact.html" class="mobile-link underline-animated text-2xl font-medium">Contact</a></li>
+    </div>
+
+
+    <!-- Hero Section -->
+    <section class="relative bg-cover bg-center py-24 px-4 text-white" style="background-image: url('https://images.unsplash.com/photo-1596495577886-d920f1fb7238?auto=format&fit=crop&w=1500&q=80');">
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div class="relative z-10 max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Find Trusted Artisans Near You</h1>
+                <p class="text-lg md:text-xl text-gray-200">
+                    Book skilled and trusted plumbers, electricians, painters and more across Nigeria. Fast. Reliable. <br>No stress, just results
+                </p>
+        </div>
+    </section>
+
+
+    <!-- Search + Filter  [#d97706] hover:bg-[#b85f03] -->
+    <section class="max-w-4xl mx-auto px-4 py-6">
+        <div class="flex flex-col md:flex-row items-center gap-4 mb-8">
+            <input id="searchInput" type="text" placeholder="Search name or service..." class="w-full md:flex-1 px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 shadow-sm">
+            
+            <!-- Custom Styled Select -->
+            <div class="relative w-full md:w-64">
+                <select id="categoryFilter" placeholder="Select a Category..." autocomplete="off" class="appearance-none px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 pr-10 shadow-sm bg-white text-gray-700 font-medium">
+                    <option value="">All Categories</option>
+                    <option>Plumber</option>
+                    <option>Electrician</option>
+                    <option>Cleaner</option>
+                    <option>Painter</option>
+                    <option>Carpenter</option>
+                    <option>Tiler</option>
+                    <option>Mechanics</option>
+                    <option>Tailors</option>
+                    <option>AC Technicians</option>
+                    <option>Hair Stylist</option>
+                    <option>Makeup Artist</option>
+                    <option>Fashion Designer</option>
+                    <option>Nail Technician</option>
+                    <option>Braider</option>
+                    <option>Dreadlocks Stylist</option>
+                    <option>Barber</option>
+                    <option>Generator Repairs</option>
+                </select>
+                
+                <!-- Custom Arrow -->
+                <!-- <div class="pointer-events-none absolute inset-y-0 right-3 flex items-center text-gray-500">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </div> -->
+            </div>
+        </div>
+        <p class="text-center text-xl text-[#d97706] mb-8">Click each card to view and book the artisan</p>
+        <!-- Artisan Cards -->
+        <div id="card-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        
+        
+        <!-- Pagination -->
+        <div class="flex justify-center mt-8 gap-4">
+            <button id="prevPage" class="text-xl text-primary">&#x25C0;</button>
+            <span id="pageIndicator" class="text-gray-700 font-medium"></span>
+            <button id="nextPage" class="text-xl text-primary">&#x25B6;</button>
+        </div>
+    </section>
+
+    <!-- Modal -->  
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center z-50 p-4">
+        <div class="bg-white max-w-sm w-full p-4 rounded-lg relative">
+            <button onclick="closeModal()" class="absolute top-1 right-1 text-gray-500 text-xl">&times;</button>
+            <img loading="lazy" id="modalImg" class="w-full h-80 object-cover object-top rounded-lg mb-4 mt-3" />
+            <h2 id="modalName" class="text-lg font-semibold"></h2>
+            <p id="modalService" class="text-gray-600 text-sm"></p>
+            <p id="modalLocation" class="text-xs text-gray-500"></p>
+            <p id="modalLPhone" class="text-xs text-gray-500 mb-2"></p> <br>
+            <p id="modalDesc" class="text-sm text-gray-700 mb-2"></p>
+            <p id="modalRating" class="text-yellow-500 font-medium text-sm"></p>
+            <a id="modalWhatsapp" href="#" target="_blank" class="block mt-3 text-center bg-[#d97706] hover:bg-[#b85f03] text-white text-sm py-2 rounded-lg">Book Now</a>
+        </div>
+    </div>
+
+    
+    
+
+
+    
+
+
+    <!-- Footer -->
+
+    <footer class="bg-gray-50 border-t border-gray-200 py-12 mt-10">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-10 text-gray-700">
+            <!-- Logo & Description -->
+            <div>
+                <h2 class="text-2xl font-bold text-[#d97706] mb-4">FixItNaija</h2>
+                <p class="text-sm leading-relaxed">
+                Connecting you with trusted artisans and service providers near you, fast, reliable, and easy.
+                </p>
+            </div>
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                <ul class="space-y-2 text-sm">
+                <li><a href="index.html" class="hover:text-[#d97706]">Home</a></li>
+                <li><a href="#how_it_works" class="hover:text-[#d97706]">How It Works</a></li>
+                <li><a href="service.html" class="hover:text-[#d97706]">Services</a></li>
+                <li><a href="contact.html" class="hover:text-[#d97706]">Contact</a></li>
+                </ul>
+            </div>
+            <!-- Services -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Top Services</h3>
+                <ul class="space-y-2 text-sm">
+                <li><a href="#" class="hover:text-[#d97706]">Hair Stylists</a></li>
+                <li><a href="#" class="hover:text-[#d97706]">Plumbers</a></li>
+                <li><a href="#" class="hover:text-[#d97706]">Electricians</a></li>
+                <li><a href="#" class="hover:text-[#d97706]">More Services</a></li>
+                </ul>
+            </div>
+            <!-- Contact & Social -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                <p class="text-sm mb-2">jcodesstudio@gmail.com</p>
+                <p class="text-sm mb-4">+234 815 282 6507</p>
+                <div class="flex space-x-4 mt-4">
+                    <a href="/facebook" class="text-gray-500 hover:text-[#d97706]" aria-label="Facebook">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M22 12.07C22 6.48 17.52 2 12 2S2 6.48 2 12.07c0 5 3.66 9.13 8.44 9.88v-6.99h-2.54V12h2.54v-2.12c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.96h-2.34v6.99C18.34 21.2 22 17.07 22 12.07z"/>
+                        </svg>
+                    </a>
+                    <a href="/x" class="text-gray-500 hover:text-[#d97706]" aria-label="Twitter/X">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M22 4.01a8.9 8.9 0 0 1-2.6.71A4.52 4.52 0 0 0 21.4 2a9.02 9.02 0 0 1-2.86 1.1A4.48 4.48 0 0 0 15.5 2c-2.5 0-4.5 2.03-4.5 4.54 0 .36.04.7.12 1.04C7.73 7.36 4.1 5.45 1.7 2.44A4.54 4.54 0 0 0 .9 4.95c0 1.57.78 2.96 1.96 3.78a4.48 4.48 0 0 1-2.05-.58v.06c0 2.2 1.54 4.03 3.6 4.44a4.44 4.44 0 0 1-2.04.08c.58 1.82 2.26 3.14 4.25 3.18A9.01 9.01 0 0 1 0 19.1a12.75 12.75 0 0 0 6.88 2.02c8.26 0 12.78-6.91 12.78-12.9 0-.2 0-.41-.02-.61A9.33 9.33 0 0 0 24 4.56a8.97 8.97 0 0 1-2.6.72A4.51 4.51 0 0 0 22 4.01z"/>
+                        </svg>
+                    </a>
+                    <a href="/instagram" class="text-gray-500 hover:text-[#d97706]" aria-label="Instagram">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M7 2C4.8 2 3 3.8 3 6v12c0 2.2 1.8 4 4 4h10c2.2 0 4-1.8 4-4V6c0-2.2-1.8-4-4-4H7zm0 2h10c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H7c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm5 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm4.5-1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
+                        </svg>
+                    </a>
+                    <a href="/linkedin" class="text-gray-500 hover:text-[#d97706]" aria-label="LinkedIn">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M6.94 6.06a1.81 1.81 0 1 1 0-3.62 1.81 1.81 0 0 1 0 3.62zM4.5 21V8.25h4.88V21H4.5zM14.16 8.25c-2.06 0-2.95 1.16-3.2 1.98V8.25H6.06V21h4.88v-6.56c0-1.77.87-2.44 2.03-2.44 1.1 0 1.63.65 1.63 2.13V21h4.88v-6.82c0-3.45-1.84-5.13-4.32-5.13z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-sm text-gray-500 mt-10 px-4">
+            © 2025 FixItNaija. All rights reserved.
+        </div>
+    </footer>
+
+
+    <!-- Js Script -->
+    <script src="../js/script.js"></script>
+
+</body>
+</html>
